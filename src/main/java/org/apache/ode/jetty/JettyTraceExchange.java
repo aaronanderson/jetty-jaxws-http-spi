@@ -132,8 +132,7 @@ public class JettyTraceExchange extends JettyExchange {
 		public void write(byte[] b, int off, int len) throws IOException {
 			for (int i = off; i < off + len; i++) {
 				output.append((char) b[i]);
-			}// FilterOut will call the write above causing duplicate
-				// output.skip it.
+			}// FilterOut will call the write above causing duplicate output.skip it.
 			super.out.write(b, off, len);
 		}
 
@@ -165,7 +164,6 @@ public class JettyTraceExchange extends JettyExchange {
 
 		@Override
 		public int read(byte[] b, int off, int len) throws IOException {
-			// TODO Auto-generated method stub
 			int cnt = super.read(b, off, len);
 			if (cnt != -1) {
 				for (int i = off; i < cnt; i++) {
@@ -180,11 +178,13 @@ public class JettyTraceExchange extends JettyExchange {
 	public class ResponseTraceHeaderMap extends ResponseHeaderMap {
 		@Override
 		public List<String> put(String name, List<String> values) {
-			outHeaders.append("\t Name: ");
-			outHeaders.append(name);
-			outHeaders.append(" Value: ");
-			outHeaders.append(request.getHeader(name));
-			outHeaders.append("\n");
+			for (String value : values) {
+				outHeaders.append("\t Name: ");
+				outHeaders.append(name);
+				outHeaders.append(" Value: ");
+				outHeaders.append(value);
+				outHeaders.append("\n");
+			}
 			return super.put(name, values);
 		}
 	}
