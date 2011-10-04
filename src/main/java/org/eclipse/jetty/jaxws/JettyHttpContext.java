@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.ode.jetty;
+package org.eclipse.jetty.jaxws;
 
 import java.util.Set;
 
 import javax.xml.ws.spi.http.HttpContext;
 import javax.xml.ws.spi.http.HttpHandler;
 
-import org.apache.ode.jetty.JAXWSHandler.JettyAttributeInfo;
+import org.eclipse.jetty.jaxws.JAXWSHandler.JettyAttributeInfo;
 
 public class JettyHttpContext extends HttpContext {
 	

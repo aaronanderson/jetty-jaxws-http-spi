@@ -16,11 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.ode.jetty;
+package org.eclipse.jetty.jaxws;
 
 import javax.jws.WebService;
 
-@WebService(targetNamespace = EchoService.TNS, serviceName = EchoServiceImpl.SERVICE_NAME, portName = EchoServiceImpl.PORT_NAME, endpointInterface = "org.apache.ode.jetty.EchoService")
+@WebService(targetNamespace = EchoService.TNS, serviceName = EchoServiceImpl.SERVICE_NAME, portName = EchoServiceImpl.PORT_NAME, endpointInterface = "org.eclipse.jetty.jaxws.EchoService")
 public class EchoServiceImpl implements EchoService {
 
 	public static final String SERVICE_NAME = "EchoService";

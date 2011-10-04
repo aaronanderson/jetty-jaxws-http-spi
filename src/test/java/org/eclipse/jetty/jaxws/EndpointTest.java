@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.ode.jetty;
+package org.eclipse.jetty.jaxws;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -33,6 +33,8 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Endpoint;
 import javax.xml.ws.Service;
 
+import org.eclipse.jetty.jaxws.JAXWSHandler;
+import org.eclipse.jetty.jaxws.JettyHttpContext;
 import org.eclipse.jetty.server.Server;
 import org.junit.Test;
 
@@ -87,7 +89,6 @@ public class EndpointTest {
 		JAXWSHandler handler = new JAXWSHandler();
 		server.setHandler(handler);
 		server.start();
-		// server.join();
 
 		try {
 			JettyHttpContext context = handler.register(ctxPath, epPath);

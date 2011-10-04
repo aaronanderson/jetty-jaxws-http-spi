@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.ode.jetty;
+package org.eclipse.jetty.jaxws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

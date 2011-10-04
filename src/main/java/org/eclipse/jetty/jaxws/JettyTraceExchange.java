@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.ode.jetty;
+package org.eclipse.jetty.jaxws;
 
 import java.io.FilterInputStream;
 import java.io.FilterOutputStream;
@@ -38,7 +38,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.xml.ws.spi.http.HttpContext;
 import javax.xml.ws.spi.http.HttpExchange;
 
-import org.apache.ode.jetty.JettyExchange.ResponseHeaderMap;
+import org.eclipse.jetty.jaxws.JettyExchange.ResponseHeaderMap;
 
 public class JettyTraceExchange extends JettyExchange {
 
